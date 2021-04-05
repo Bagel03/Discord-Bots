@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "canvas": "^2.7.0",
-    "discord-folders": "^0.0.84",
+    "discord-folders": "^0.0.87",
     "discord.js": "^12.5.2"
   },
   "devDependencies": {

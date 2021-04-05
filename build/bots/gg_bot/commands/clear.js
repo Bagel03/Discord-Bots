@@ -16,5 +16,6 @@ export const onCalled = async (client, message) => {
 };
 export const description = "Clears the last <number> of messages, where <number> is the input of the command, Can only be used by admins.";
 export const hasPermissions = (member) => {
+    console.log("Checked for permissions");
     return member.hasPermission("ADMINISTRATOR");
 };

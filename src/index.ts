@@ -28,12 +28,13 @@ const init = async () => {
 init();
 
 
-// ERROR HANDLING 
-process.on("uncaughtException", (err) => {
-    console.error("Uncaught fatal error: ", err.message);
-    console.log(err.stack)
-    console.log("Restarting app");
-    exec("../restart.bat");
-})
+if(process.argv.slice(2)[0] === "--restart-on-error"){
+    // ERROR HANDLING 
+    process.on("uncaughtException", (err) => {
+        console.error("Uncaught fatal error: ", err.message);
+        console.log(err.stack)
+        console.log("Restarting app");
+        exec("../restart.bat");
+    })
 
-
+}
